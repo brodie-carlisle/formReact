@@ -39,7 +39,7 @@ class Login extends Component {
             type="email"
             name="email"
             placeholder="email address"
-          />
+          /><br></br>
           <input
             value={this.state.password}
             onChange={e => this.change(e)}
@@ -62,7 +62,9 @@ class Login extends Component {
           <br />
           <Link style={{ color: "white", fontSize: "55%" }} to="/Register">
             Click Here to Register
-          </Link>
+          </Link>{" "}
+          <Link style={{ color: "white", fontSize: "55%" }} to="/Forgot">
+            Forgot Password</Link>
         </form>
       </div>
     );

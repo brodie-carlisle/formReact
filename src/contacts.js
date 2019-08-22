@@ -10,9 +10,20 @@ export const addContacts = contact => {
     contact.lastName &&
     contact.email &&
     contact.phoneNumber &&
-    contact.password
+    contact.password 
+    // contact.id = contacts.length
   ) {
     // contact.id = contacts.length
+    const data = contact;
+    const url = "http://localhost:3000/";
+
+    fetch(url, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
     contacts.push(contact);
     result = true;
   }

@@ -1,8 +1,12 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import "../Users.css";
 
 const Users = ({ getContacts }) => {
+  
+  fetch("http://localhost:3000/")
+  .then(function(response) {
+    return response.json();
+  })
   const contacts = getContacts().map(contact => (
     <div>
       {contact.firstName} {contact.lastName}

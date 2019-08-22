@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Register from "./component/Register";
 import Login from "./component/Login";
 import Users from "./component/Users";
+import Forgot from "./component/Forgot";
 
 const Routing = props => {
   return (
@@ -20,6 +21,9 @@ const Routing = props => {
         path="/Users"
         component={() => <Users getContacts={props.getContacts} />}
       />
+      <Route
+        path="/Forgot"
+        component={Forgot} />
     </Switch>
   );
 };
